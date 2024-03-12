@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import CheckoutItem from "../../components/CheckoutItem/CheckoutItem";
@@ -12,15 +13,15 @@ import * as checkoutApi from "../../services/checkoutApi";
 import "./Checkout.css";
 
 const Checkout = ({ updateCheckoutCount }) => {
-  const [checkoutItems, setcheckoutItems] = useState(0);
+  const [checkoutItems, setCheckoutItems] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(true);
 
   useEffect(() => {
     const fetchCheckoutItemns = async () => {
-      const AllcheckoutItems = await checkoutApi.getAllCheckoutItems();
-      if (checkoutItems !== FETCH_CHECKOUT_PRODUCTS_ERROR) {
-        setcheckoutItems(AllcheckoutItems);
+      const allCheckoutItems = await checkoutApi.getAllCheckoutItems();
+      if (allCheckoutItems !== FETCH_CHECKOUT_PRODUCTS_ERROR) {
+        setCheckoutItems(allCheckoutItems);
       } else {
         setError(true);
       }
@@ -29,22 +30,18 @@ const Checkout = ({ updateCheckoutCount }) => {
     fetchCheckoutItemns();
   }, []);
 
-  removeItemFromCheckout = async (id) => {
+  const removeItemFromCheckout = async (id) => {
     const remainingCheckoutItems = await checkoutApi.removeProductFromCheckout(
       id
     );
     if (remainingCheckoutItems !== REMOVE_PRODUCT_FROM_CHECKOUT_ERROR) {
-      this.setState({
-        checkoutItems: remainingCheckoutItems,
-        loading: false,
-        error: false,
-      });
+      setCheckoutItems(remainingCheckoutItems);
       await updateCheckoutCount();
       toast.success(PRODUCT_REMOVED_FROM_CHECKOUT_SUCCESS);
     } else {
       toast.error(remainingCheckoutItems);
-      this.setState({ loading: false, error: true });
     }
+    setLoading(false);
   };
 
   return (
@@ -58,7 +55,7 @@ const Checkout = ({ updateCheckoutCount }) => {
             later.
           </p>
         ) : null}
-        {!loading & !error && checkoutItems.length ? (
+        {!loading && !error && checkoutItems.length ? (
           <div>
             <div className="checkout-header">
               <div>Product Information</div>
@@ -88,6 +85,10 @@ const Checkout = ({ updateCheckoutCount }) => {
       </div>
     </div>
   );
+};
+
+Checkout.propTypes = {
+  updateCheckoutCount: PropTypes.func.isRequired,
 };
 
 export default Checkout;
