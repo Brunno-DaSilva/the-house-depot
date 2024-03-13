@@ -1,13 +1,13 @@
-import axios from 'axios';
+import axios from "axios";
 import {
   FETCH_PRODUCT_DATA_ERROR,
   ADD_NEW_PRODUCT_ERROR,
   ADD_NEW_PRODUCT_SUCCESS,
-} from '../constants/constants';
+} from "../constants/constants";
 
 export const getAllProducts = async () => {
   try {
-    const { data } = await axios.get('/products');
+    const { data } = await axios.get("/products");
     return data;
   } catch (err) {
     console.error(err);

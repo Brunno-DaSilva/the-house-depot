@@ -6,10 +6,22 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div>
-      <h1 className="home-title">Welcome to Hardware Handler!</h1>
-
-      <StatusCard title="Weekly Product Count" productCount={350} />
+    <div className="home">
+      <StatusCard
+        title="Weekly Product Count"
+        productCount={100}
+        interval="weekly"
+      />
+      <StatusCard
+        title="Monthly Product Count"
+        productCount={5}
+        interval="monthly"
+      />
+      <StatusCard
+        title="Yearly Product Count"
+        productCount={65}
+        interval="yearly"
+      />
     </div>
   );
 };
