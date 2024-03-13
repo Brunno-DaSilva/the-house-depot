@@ -4,12 +4,15 @@
   justify-content: center;
   font-size: 40px;
   padding-bottom: 25px;
+  background: var(--bg-grayish);
 }
 
 .home-links-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
+  background: var(--bg-grayish);
 }
 
 .home-link {
@@ -21,7 +24,7 @@
   width: 250px;
   height: 250px;
   border-radius: 5px;
-  background-color: #ffcfae;
+  background: var(--bg-grayish);
   color: var(--red);
 }
 

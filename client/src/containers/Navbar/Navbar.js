@@ -1,9 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTools, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { FETCH_CHECKOUT_COUNT_ERROR } from '../../constants/constants';
-import './Navbar.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTools, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { FETCH_CHECKOUT_COUNT_ERROR } from "../../constants/constants";
+import PropTypes from "prop-types";
+
+import "./Navbar.css";
 
 const Navbar = ({ checkoutCount }) => {
   return (
@@ -31,6 +33,10 @@ const Navbar = ({ checkoutCount }) => {
       </span>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  checkoutCount: PropTypes.number.isRequired,
 };
 
 export default Navbar;

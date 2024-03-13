@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import Home from "../Home/Home";
 import ProductList from "../ProductList/ProductList";
 import ProductForm from "../ProductForm/ProductForm";
-
+import { Sidebar } from "../Sidebar/Sidebar";
 import Checkout from "../Checkout/Checkout";
 import * as checkoutApi from "../../services/checkoutApi";
 
@@ -41,7 +41,12 @@ const App = () => {
     <Router>
       <ToastContainer />
       <section className="app-wrapper">
-        <Navbar checkoutCount={checkoutCount} />
+        <header className="header">
+          <Navbar checkoutCount={checkoutCount} />
+        </header>
+        <div className="sidebar">
+          <Sidebar />
+        </div>
         <article className="app-container">
           <Route exact path="/" component={Home} />
           <Route path="/my-products">
