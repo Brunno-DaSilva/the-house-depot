@@ -4,10 +4,10 @@ import Loader from "../../components/Loader/Loader";
 import {
   ADD_NEW_PRODUCT_ERROR,
   ADD_NEW_PRODUCT_SUCCESS,
-  FETCH_DEPARTMENT_DATA_ERROR,
 } from "../../constants/constants";
-import * as departmentApi from "../../services/departmentApi";
 import * as productApi from "../../services/productApi";
+import { useDepartments } from "../../Hooks/useDepartments";
+
 import "./ProductForm.css";
 
 const defaultsForNewProduct = {
@@ -20,24 +20,14 @@ const defaultsForNewProduct = {
 const ProductForm = () => {
   const [newProduct, setNewProduct] = useState(defaultsForNewProduct);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [departments, setDepartment] = useState([]);
+  const { departments, error } = useDepartments();
 
   useEffect(() => {
-    const fetchDepartments = async () => {
-      const allDepartments = await departmentApi.getAllDepartments();
-
-      if (allDepartments !== FETCH_DEPARTMENT_DATA_ERROR) {
-        setDepartment(allDepartments);
-      } else {
-        setError(true);
-      }
+    if (departments.length > 0 || error) {
       setLoading(false);
-    };
-
-    fetchDepartments();
-  }, []);
+    }
+  }, [departments, error]);
 
   const onChange = (propName, val) => {
     const updatedProduct = { ...newProduct };
@@ -68,7 +58,6 @@ const ProductForm = () => {
       setSaved(true);
       toast.success(ADD_NEW_PRODUCT_SUCCESS);
     } else {
-      setError(true);
       toast.error(`${addProduct} Please refresh the page and try again.`);
     }
     setLoading(false);
