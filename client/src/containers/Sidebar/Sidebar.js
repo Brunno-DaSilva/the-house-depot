@@ -8,19 +8,19 @@ export const Sidebar = () => {
   return (
     <aside className="sidebar">
       <section className="sidebar__links">
-        <NavLink to="/my-products">
+        <NavLink className="sidebar__link" to="/my-products">
           <FontAwesomeIcon className="sidebar-icon" icon={faToolbox} />
-          <p>Products</p>
+          <span>Products</span>
         </NavLink>
-        <NavLink to="/new-product-form">
+        <NavLink className="sidebar__link" to="/new-product-form">
           <FontAwesomeIcon className="sidebar-icon" icon={faPlus} />
-          <p>Add New Products</p>
+          <span>Add New Products</span>
         </NavLink>
       </section>
       <section className="sidebar__settings">
         <NavLink exact to="/settings">
-          <FontAwesomeIcon className="navbar-icon" icon={faCog} />
-          Settings
+          <FontAwesomeIcon className="sidebar-icon" icon={faCog} />
+          <span>Settings</span>
         </NavLink>
       </section>
     </aside>

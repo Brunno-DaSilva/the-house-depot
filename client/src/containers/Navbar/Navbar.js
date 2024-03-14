@@ -24,7 +24,6 @@ const Navbar = ({ checkoutCount }) => {
           Add New Products
         </NavLink>
         <NavLink className="navbar-link" exact to="/checkout">
-          Checkout
           <FontAwesomeIcon className="navbar-icon" icon={faShoppingCart} />
           {checkoutCount !== FETCH_CHECKOUT_COUNT_ERROR && checkoutCount > 0 ? (
             <p className="navbar-checkout-count">: {checkoutCount}</p>

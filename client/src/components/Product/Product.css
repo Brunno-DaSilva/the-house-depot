@@ -1,5 +1,5 @@
 .product {
-  background-color: #c9b16e;
+  background-color: var(--bg-white);
   width: 280px;
   padding: 20px 15px;
   margin: 15px;

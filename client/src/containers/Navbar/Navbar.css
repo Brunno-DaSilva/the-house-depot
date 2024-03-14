@@ -43,11 +43,11 @@ a:last-child {
 }
 
 a.active {
-  background-color: #b3ffff;
+  color: var(--yellow-ascent);
 }
 
 a:hover {
-  background-color: #b3ffff;
+  color: var(--yellow-ascent);
 }
 
 .navbar-checkout-count {

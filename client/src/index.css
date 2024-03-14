@@ -4,6 +4,7 @@
   --bg-white: #ffffff;
   --bg-grayish: #f9f9f9;
   --dark-gray-foreground: #2e2c2c;
+  --light-gray-foreground: #2e2c2c;
   --yellow-ascent: #fabb18;
 
   background-color: var(--bg-white);
