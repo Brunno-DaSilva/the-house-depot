@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import * as departmentApi from "../../services/departmentApi";
+import { FETCH_DEPARTMENT_DATA_ERROR } from "../../constants/constants";
+import Loader from "../../components/Loader/Loader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import StatusCard from "../../components/Cards/StatusCard/StatusCard";
-
+import ListCard from "../../components/Cards/ListCard/ListCard";
 import "./Home.css";
 
 const Home = () => {
   const [dateAndTime, setDateAndTime] = useState();
+  const [departments, setDepartment] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const getDateAndTime = async () => {
@@ -54,6 +60,23 @@ const Home = () => {
     getDateAndTime();
   }, []);
 
+  useEffect(() => {
+    const fetchDepartments = async () => {
+      const allDepartments = await departmentApi.getAllDepartments();
+
+      if (allDepartments !== FETCH_DEPARTMENT_DATA_ERROR) {
+        setDepartment(allDepartments);
+      } else {
+        setError(true);
+      }
+      setLoading(false);
+    };
+
+    fetchDepartments();
+  }, []);
+
+  console.log("Something Went Wrong => ", error);
+
   return (
     <div className="home">
       <div className="home__top">
@@ -89,7 +112,10 @@ const Home = () => {
       </div>
 
       <div className="home__bottom">
-        <div className="home__bottom-departments"></div>
+        {loading ? <Loader message="Loading new product form data..." /> : null}
+        <div className="home__bottom-departments">
+          <ListCard title="Departments" items={departments} />
+        </div>
         <div className="home__bottom-highlights"></div>
       </div>
     </div>
