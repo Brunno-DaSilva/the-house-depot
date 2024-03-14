@@ -17,7 +17,8 @@
   gap: 1rem;
 }
 
-.sidebar__link {
+.sidebar__link,
+.sidebar__settings {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -26,7 +27,8 @@
   gap: 1rem;
 }
 
-.sidebar__link span {
+.sidebar__link span,
+.sidebar__settings span {
   margin: 0;
   padding: 0;
   color: #2e2c2c;
@@ -49,5 +51,5 @@ a:hover,
   padding-right: 0.5rem;
 }
 
-.sidebar__settings {
+ {
 }

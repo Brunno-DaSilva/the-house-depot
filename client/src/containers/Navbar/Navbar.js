@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTools, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FETCH_CHECKOUT_COUNT_ERROR } from "../../constants/constants";
 import PropTypes from "prop-types";
 
@@ -10,13 +10,25 @@ import "./Navbar.css";
 const Navbar = ({ checkoutCount }) => {
   return (
     <nav className="navbar">
-      <div className="navbar-home-link">
+      <div className="navbar__home-link">
         <NavLink exact to="/">
-          Hardware Handler
-          <FontAwesomeIcon className="navbar-icon" icon={faTools} />
+          <span>NaiLogger</span>
+          <div className="underscore"></div>
         </NavLink>
       </div>
-      <span className="navbar-links-wrapper">
+      <div className="navbar__search">
+        <div className="search">
+          <input
+            type="text"
+            className="searchTerm"
+            placeholder="What are you looking for?"
+          />
+          <button type="submit" className="searchButton">
+            <FontAwesomeIcon className="search-icon" icon={faSearch} />
+          </button>
+        </div>
+      </div>
+      <div className="navbar-links-wrapper">
         <NavLink exact to="/my-products">
           My Products
         </NavLink>
@@ -29,7 +41,7 @@ const Navbar = ({ checkoutCount }) => {
             <p className="navbar-checkout-count">: {checkoutCount}</p>
           ) : null}
         </NavLink>
-      </span>
+      </div>
     </nav>
   );
 };
