@@ -62,28 +62,35 @@ const Home = () => {
           <h3>{dateAndTime}</h3>
         </div>
         <div className="home__add">
-          <NavLink to="/new-product-form">
-            <FontAwesomeIcon className="home__add-icon" icon={faPlus} />
-            <p>Add New Products</p>
-          </NavLink>
+          <p>Add New Products</p>
+          <div className="home__icon">
+            <NavLink to="/new-product-form">
+              <FontAwesomeIcon className="home__icon--icon" icon={faPlus} />
+            </NavLink>
+          </div>
         </div>
       </div>
       <div className="home__cards">
         <StatusCard
           title="Weekly Product Count"
-          productCount={100}
+          productCount={99}
           interval="weekly"
         />
         <StatusCard
           title="Monthly Product Count"
-          productCount={5}
+          productCount={55}
           interval="monthly"
         />
         <StatusCard
           title="Yearly Product Count"
-          productCount={65}
+          productCount={35}
           interval="yearly"
         />
+      </div>
+
+      <div className="home__bottom">
+        <div className="home__bottom-departments"></div>
+        <div className="home__bottom-highlights"></div>
       </div>
     </div>
   );

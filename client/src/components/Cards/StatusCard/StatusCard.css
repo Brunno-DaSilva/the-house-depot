@@ -9,12 +9,12 @@
   border-radius: 34px;
 }
 
-.card__title {
+.card__title h3 {
   font-size: 28px;
   color: var(--dark-gray-foreground);
   letter-spacing: -2px;
+  font-weight: 500;
 }
-
 .card__status {
   width: 100%;
   display: flex;
@@ -23,7 +23,8 @@
 }
 
 .status__number p {
-  font-size: 60px;
+  margin: 0;
+  font-size: 80px;
   font-weight: bold;
 }
 .status__icon {
