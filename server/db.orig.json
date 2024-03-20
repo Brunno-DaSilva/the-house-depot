@@ -77,7 +77,7 @@
     {
       "id": 5,
       "name": "Bidet Seat",
-      "brand": "Momo",
+      "brand": "DeMalt",
       "description": "Treat the tushy with the respect it deservers. Temperature controls for water at the perfect temp, every time.",
       "retailPrice": 13599,
       "departmentId": 3,
@@ -104,7 +104,7 @@
     {
       "id": 8,
       "name": "Tangerine Pipe Wrench",
-      "brand": "Pie-Obi",
+      "brand": "YouOBi",
       "description": "A plumber's best friend whether that faucet's got a leak or the toilet won't stop running.",
       "retailPrice": 2725,
       "departmentId": 3,
@@ -131,7 +131,7 @@
     {
       "id": 11,
       "name": "Hand-held Orbital Sander",
-      "brand": "Posch",
+      "brand": "DeMalt",
       "description": "Watch your fingers. This sander will take the paint off that table in next to no time.",
       "retailPrice": 7500,
       "departmentId": 2,
@@ -149,7 +149,7 @@
     {
       "id": 13,
       "name": "Paint Brush Set",
-      "brand": "ArtisanCraft",
+      "brand": "DeMalt",
       "description": "Achieve smooth and even strokes with this high-quality paint brush set.",
       "retailPrice": 2499,
       "departmentId": 8,
@@ -167,7 +167,7 @@
     {
       "id": 15,
       "name": "Stainless Steel Screws Assortment",
-      "brand": "ToughFix",
+      "brand": "YouOBi",
       "description": "A collection of durable stainless steel screws in various sizes for all your fixing needs.",
       "retailPrice": 1299,
       "departmentId": 9,
@@ -176,7 +176,7 @@
     {
       "id": 16,
       "name": "Brass Padlocks Set",
-      "brand": "SecureGuard",
+      "brand": "MetallicGleam",
       "description": "Keep your belongings safe and secure with this set of premium brass padlocks.",
       "retailPrice": 1899,
       "departmentId": 9,
@@ -203,7 +203,7 @@
     {
       "id": 19,
       "name": "Solar-Powered Outdoor Lights Set",
-      "brand": "SunBright",
+      "brand": "MetallicGleam",
       "description": "Illuminate your outdoor space with eco-friendly solar-powered lights. Perfect for pathways, gardens, and patios.",
       "retailPrice": 2799,
       "departmentId": 5,
@@ -221,7 +221,7 @@
     {
       "id": 21,
       "name": "Stainless Steel Refrigerator",
-      "brand": "ChillMaster",
+      "brand": "EcoHeat",
       "description": "Keep your food fresh and organized with this spacious stainless steel refrigerator. Features advanced cooling technology.",
       "retailPrice": 15999,
       "departmentId": 4,
@@ -239,7 +239,7 @@
     {
       "id": 23,
       "name": "Digital Multimeter",
-      "brand": "TechProbe",
+      "brand": "EcoHeat",
       "description": "Accurately measure voltage, current, and resistance with this versatile digital multimeter. Essential for electrical troubleshooting.",
       "retailPrice": 4999,
       "departmentId": 7,
@@ -248,7 +248,7 @@
     {
       "id": 24,
       "name": "LED Light Bulb Pack",
-      "brand": "BrightTech",
+      "brand": "EcoHeat",
       "description": "Upgrade your lighting to energy-efficient LEDs with this pack of long-lasting light bulbs. Save money on your electricity bill.",
       "retailPrice": 1499,
       "departmentId": 7,
@@ -257,7 +257,7 @@
     {
       "id": 25,
       "name": "Gas-Powered Lawn Mower",
-      "brand": "GreenCuts",
+      "brand": "YouOBi",
       "description": "Maintain a pristine lawn with this powerful gas-powered lawn mower. Features adjustable cutting heights and a large grass bag.",
       "retailPrice": 11999,
       "departmentId": 6,
@@ -266,7 +266,7 @@
     {
       "id": 26,
       "name": "Outdoor Patio Set",
-      "brand": "PatioLife",
+      "brand": "DeMalt",
       "description": "Create an inviting outdoor space with this stylish patio set. Includes a table, chairs, and comfortable cushions.",
       "retailPrice": 7999,
       "departmentId": 6,
@@ -275,7 +275,7 @@
     {
       "id": 27,
       "name": "Compact Electric Water Heater",
-      "brand": "HotWave",
+      "brand": "YouOBi",
       "description": "Enjoy hot water on demand with this compact electric water heater. Perfect for small spaces like apartments and RVs.",
       "retailPrice": 3499,
       "departmentId": 3,
@@ -284,7 +284,7 @@
     {
       "id": 28,
       "name": "Chrome Bathroom Faucet",
-      "brand": "AquaLux",
+      "brand": "DeMalt",
       "description": "Add a touch of elegance to your bathroom with this sleek chrome faucet. Features a single-handle design for easy temperature control.",
       "retailPrice": 2299,
       "departmentId": 3,
