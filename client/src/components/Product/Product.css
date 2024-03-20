@@ -28,6 +28,7 @@
 
 .productCard__description {
   color: var(--light-gray-foreground);
+  padding: 0 0.6rem;
 }
 
 .productCard__wrapper {
