@@ -63,12 +63,11 @@ const ProductForm = () => {
     setLoading(false);
   };
 
-  console.log(error);
   console.log(saved);
 
   return (
-    <div>
-      <h1 className="product-form-header">Add A New Product</h1>
+    <div className="productForm">
+      <h1 className="productForm__title">Add A New Product</h1>
       {loading ? <Loader message="Loading new product form data..." /> : null}
       {!loading ? (
         <form className="product-form">

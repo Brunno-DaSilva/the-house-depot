@@ -11,24 +11,50 @@
     {
       "id": 3,
       "name": "Plumbing"
+    },
+    {
+      "id": 4,
+      "name": "Appliances"
+    },
+    {
+      "id": 5,
+      "name": "Smart Home"
+    },
+    {
+      "id": 6,
+      "name": "Lawn & Garden"
+    },
+    {
+      "id": 7,
+      "name": "Electrical"
+    },
+    {
+      "id": 8,
+      "name": "Painting"
+    },
+    {
+      "id": 9,
+      "name": "Hardware"
     }
   ],
   "products": [
     {
       "id": 1,
       "name": "Purple Hammer",
-      "brand": "Cinncinnati Tools",
+      "brand": "YouOBi",
       "description": "This purple hammer hits nails harder than a hammer of any other color.",
       "retailPrice": 1045,
-      "departmentId": 1
+      "departmentId": 1,
+      "imageURL": "https://images.thdstatic.com/productImages/3b109a97-9f6e-4eca-91ef-9e002b1c71fb/svn/crescent-brick-hammers-chsbk24-64_600.jpg"
     },
     {
       "id": 2,
-      "name": "Blue Screw Driver",
+      "name": "Screw Driver",
       "brand": "DeMalt",
       "description": "Why stick to safe screwdriver colors like red or grey? Time to ensure you never lose this one in your tool chest.",
       "retailPrice": 567,
-      "departmentId": 1
+      "departmentId": 1,
+      "imageURL": "https://images.thdstatic.com/productImages/73e8200d-34af-49d5-96be-1c3cc4513cec/svn/klein-tools-screwdriver-sets-85073insr-64_600.jpg"
     },
     {
       "id": 3,
@@ -36,39 +62,44 @@
       "brand": "Bubble Scrubbers",
       "description": "The only plunger you'll ever need, ever again.",
       "retailPrice": 1499,
-      "departmentId": 3
+      "departmentId": 3,
+      "imageURL": "https://images.thdstatic.com/productImages/81c199cb-039b-437b-bdb7-aa3e012863a0/svn/hdx-plungers-178039-64_600.jpg"
     },
     {
       "id": 4,
-      "name": "Green Table Saw",
+      "name": "Table Saw",
       "brand": "Don Leere",
       "description": "You didn't know you needed this table saw until you saw it. Now, you can't live without it.",
       "retailPrice": 8999,
-      "departmentId": 2
+      "departmentId": 2,
+      "imageURL": "https://images.thdstatic.com/productImages/d0666fc0-6f0f-4cad-919e-7d226c632bb1/svn/ryobi-portable-table-saws-rts08-64_600.jpg"
     },
     {
       "id": 5,
-      "name": "Orange Bidet Seat",
+      "name": "Bidet Seat",
       "brand": "Momo",
       "description": "Treat the tushy with the respect it deservers. Temperature controls for water at the perfect temp, every time.",
       "retailPrice": 13599,
-      "departmentId": 3
+      "departmentId": 3,
+      "imageURL": "https://images.thdstatic.com/productImages/92288b38-a8dc-4796-80b0-341ce4785e8a/svn/white-glacier-bay-bidet-toilet-seats-bp0657-64_600.jpg"
     },
     {
       "id": 6,
       "name": "Indigo Nail Gun",
-      "brand": "Cinncinnati Tools",
+      "brand": "YouOBi",
       "description": "The only nail gun profesional contractors trust. Those nails won't know what him 'em.",
       "retailPrice": 4700,
-      "departmentId": 2
+      "departmentId": 2,
+      "imageURL": "https://images.thdstatic.com/productImages/4bc79347-7e18-478e-8db8-d7213fa756de/svn/ridgid-brad-nailers-r09891b-ac93044sbn-64_600.jpg"
     },
     {
       "id": 7,
-      "name": "Light Blue Hand Saw",
-      "brand": "DeMalt",
+      "name": "Light Green Hand Saw",
+      "brand": "YouOBi",
       "description": "You'll definitely feel the burn after a few hours of using this to cut 2x4s down to size.",
       "retailPrice": 2000,
-      "departmentId": 1
+      "departmentId": 1,
+      "imageURL": "https://images.thdstatic.com/productImages/5b6c7087-b35a-439c-b3ea-7421ca152fd6/svn/ryobi-hand-saws-rhchs201-64_600.jpg"
     },
     {
       "id": 8,
@@ -76,15 +107,17 @@
       "brand": "Pie-Obi",
       "description": "A plumber's best friend whether that faucet's got a leak or the toilet won't stop running.",
       "retailPrice": 2725,
-      "departmentId": 3
+      "departmentId": 3,
+      "imageURL": "https://images.thdstatic.com/productImages/5abd9d07-4eb1-48a2-a4f0-8a1744e09d66/svn/milwaukee-pipe-wrenches-48-22-7106-64_600.jpg"
     },
     {
       "id": 9,
       "name": "Lime Green Cordless Power Drill",
-      "brand": "Cinncinnati Tools",
+      "brand": "YouOBi",
       "description": "Hours of battery life ensure you'll run out of screws before it runs out of juice.",
       "retailPrice": 6499,
-      "departmentId": 2
+      "departmentId": 2,
+      "imageURL": "https://images.thdstatic.com/productImages/83949944-2291-4cb2-ba3b-173e97167d0b/svn/ryobi-hammer-drills-pcl220b-64_600.jpg"
     },
     {
       "id": 10,
@@ -92,15 +125,17 @@
       "brand": "Don Leere",
       "description": "Whether you're opening abandoned storage units or breaking into gated warehouses under cover of darkness, these bolt cutters won't let you down.",
       "retailPrice": 4275,
-      "departmentId": 1
+      "departmentId": 1,
+      "imageURL": "https://images.thdstatic.com/productImages/d7af8c9c-314f-4e83-acef-27ca821045fa/svn/anvil-bolt-cutters-9003h-64_600.jpg"
     },
     {
       "id": 11,
-      "name": "Violet Hand-held Orbital Sander",
+      "name": "Hand-held Orbital Sander",
       "brand": "Posch",
       "description": "Watch your fingers. This sander will take the paint off that table in next to no time.",
       "retailPrice": 7500,
-      "departmentId": 2
+      "departmentId": 2,
+      "imageURL": "https://images.thdstatic.com/productImages/e73e55bb-4e70-44b0-8145-9e43f0b24c78/svn/bosch-sheet-sanders-gss20-40-64_600.jpg"
     },
     {
       "id": 12,
@@ -108,7 +143,152 @@
       "brand": "DeMalt",
       "description": "Good enough for your shop. Great for vaccuming out your car too.",
       "retailPrice": 10999,
-      "departmentId": 2
+      "departmentId": 2,
+      "imageURL": "https://images.thdstatic.com/productImages/2c6416f2-1b9f-49d2-9c11-168729a9770d/svn/blacks-wet-dry-vacuums-em18910p-3-64_600.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Paint Brush Set",
+      "brand": "ArtisanCraft",
+      "description": "Achieve smooth and even strokes with this high-quality paint brush set.",
+      "retailPrice": 2499,
+      "departmentId": 8,
+      "imageURL": "https://images.thdstatic.com/productImages/5b9e6958-347d-4c30-b5eb-2f697dbe1f52/svn/paint-brushes-a-1827-3-64_600.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Gold Spray Paint",
+      "brand": "MetallicGleam",
+      "description": "Transform any surface into a luxurious golden masterpiece with this spray paint.",
+      "retailPrice": 1999,
+      "departmentId": 8,
+      "imageURL": "https://images.thdstatic.com/productImages/41eeb1f1-47f1-48ab-9007-b8fe725c069c/svn/gold-rust-oleum-specialty-general-purpose-spray-paint-340647-64_600.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Stainless Steel Screws Assortment",
+      "brand": "ToughFix",
+      "description": "A collection of durable stainless steel screws in various sizes for all your fixing needs.",
+      "retailPrice": 1299,
+      "departmentId": 9,
+      "imageURL": "https://images.thdstatic.com/productImages/3ba1d43a-3e1e-4e62-86d4-e4ed429f4068/svn/seachoice-boat-hardware-59433-64_600.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Brass Padlocks Set",
+      "brand": "SecureGuard",
+      "description": "Keep your belongings safe and secure with this set of premium brass padlocks.",
+      "retailPrice": 1899,
+      "departmentId": 9,
+      "imageURL": "https://images.thdstatic.com/productImages/96ae1838-c1b1-4ed0-a99e-b4491de08dca/svn/master-lock-padlocks-140kalhccp12-64_600.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Teal Hedge Trimmer",
+      "brand": "GreenWorks",
+      "description": "Trim your hedges with precision and ease using this powerful hedge trimmer.",
+      "retailPrice": 7999,
+      "departmentId": 6,
+      "imageURL": "https://images.thdstatic.com/productImages/e64c3813-5ae3-4f0a-878f-80ec5f9f475c/svn/green-machine-cordless-hedge-trimmers-gmht6200-64_600.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Cobalt Blue Plant Watering System",
+      "brand": "AquaGarden",
+      "description": "Efficiently water your plants with this automated watering system, featuring customizable settings for different plant types.",
+      "retailPrice": 3299,
+      "departmentId": 6,
+      "imageURL": "https://images.thdstatic.com/productImages/490ed427-aab3-497e-90bc-3e53a0834408/svn/bloem-watering-cans-jw41-33-64_600.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Solar-Powered Outdoor Lights Set",
+      "brand": "SunBright",
+      "description": "Illuminate your outdoor space with eco-friendly solar-powered lights. Perfect for pathways, gardens, and patios.",
+      "retailPrice": 2799,
+      "departmentId": 5,
+      "imageURL": "https://images.thdstatic.com/productImages/d0ffe771-13f5-4f29-bff1-70a8797b1827/svn/bronze-hampton-bay-path-lights-32300-020-4pk-64_600.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Smart Thermostat",
+      "brand": "EcoHeat",
+      "description": "Regulate your home's temperature intelligently with this WiFi-enabled smart thermostat. Control it from anywhere using your smartphone.",
+      "retailPrice": 9999,
+      "departmentId": 5,
+      "imageURL": "https://images.thdstatic.com/productImages/1b78d244-05c7-4fc9-9f91-063dedcbe16f/svn/black-ecobee-programmable-thermostats-eb-state6-01-64_600.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Stainless Steel Refrigerator",
+      "brand": "ChillMaster",
+      "description": "Keep your food fresh and organized with this spacious stainless steel refrigerator. Features advanced cooling technology.",
+      "retailPrice": 15999,
+      "departmentId": 4,
+      "imageURL": "https://images.thdstatic.com/productImages/239316ec-24ed-4800-b409-fb93b4b699cb/svn/stainless-steel-frigidaire-top-freezer-refrigerators-frtd2021as-64_600.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Robot Vacuum Cleaner",
+      "brand": "CleanBot",
+      "description": "Sit back and relax while this robot vacuum cleaner takes care of the dirty work. Program it to clean at your convenience.",
+      "retailPrice": 8999,
+      "departmentId": 4,
+      "imageURL": "https://images.thdstatic.com/productImages/9343096c-1589-4251-bd35-55f1a74816d4/svn/irobot-robotic-vacuums-e619820-64_600.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Digital Multimeter",
+      "brand": "TechProbe",
+      "description": "Accurately measure voltage, current, and resistance with this versatile digital multimeter. Essential for electrical troubleshooting.",
+      "retailPrice": 4999,
+      "departmentId": 7,
+      "imageURL": "https://images.thdstatic.com/productImages/458442d8-ad7f-403f-bdc4-33d179c38fe3/svn/triplett-multimeters-9007a-64_600.jpg"
+    },
+    {
+      "id": 24,
+      "name": "LED Light Bulb Pack",
+      "brand": "BrightTech",
+      "description": "Upgrade your lighting to energy-efficient LEDs with this pack of long-lasting light bulbs. Save money on your electricity bill.",
+      "retailPrice": 1499,
+      "departmentId": 7,
+      "imageURL": "https://images.thdstatic.com/productImages/c7c6c107-1382-4324-b600-f50958876fc4/svn/led-light-bulbs-b7a19a60wul14-64_600.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Gas-Powered Lawn Mower",
+      "brand": "GreenCuts",
+      "description": "Maintain a pristine lawn with this powerful gas-powered lawn mower. Features adjustable cutting heights and a large grass bag.",
+      "retailPrice": 11999,
+      "departmentId": 6,
+      "imageURL": "https://images.thdstatic.com/productImages/8a270bb9-7d06-4dd0-a78a-132f13bdbaf8/svn/yardmax-gas-push-mowers-yg1650-64_600.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Outdoor Patio Set",
+      "brand": "PatioLife",
+      "description": "Create an inviting outdoor space with this stylish patio set. Includes a table, chairs, and comfortable cushions.",
+      "retailPrice": 7999,
+      "departmentId": 6,
+      "imageURL": "https://images.thdstatic.com/productImages/c074ba71-4328-48d1-bce9-758f38ca5c95/svn/hampton-bay-patio-dining-sets-525-0200-002-64_600.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Compact Electric Water Heater",
+      "brand": "HotWave",
+      "description": "Enjoy hot water on demand with this compact electric water heater. Perfect for small spaces like apartments and RVs.",
+      "retailPrice": 3499,
+      "departmentId": 3,
+      "imageURL": "https://images.thdstatic.com/productImages/feb84227-7ae9-4010-89a7-962a8bfc27d0/svn/rheem-tankless-electric-water-heaters-retex-13-64_600.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Chrome Bathroom Faucet",
+      "brand": "AquaLux",
+      "description": "Add a touch of elegance to your bathroom with this sleek chrome faucet. Features a single-handle design for easy temperature control.",
+      "retailPrice": 2299,
+      "departmentId": 3,
+      "imageURL": "https://images.thdstatic.com/productImages/105899f6-9c89-4f07-a6fa-c1b975613cf5/svn/polished-chrome-pfister-widespread-bathroom-faucets-lf-049-lrcc-64_600.jpg"
     }
   ],
   "checkout": []
