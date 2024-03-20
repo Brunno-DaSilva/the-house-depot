@@ -131,7 +131,6 @@ const ProductList = ({ updateCheckoutCount }) => {
           {!error && filtersByDepartment.length
             ? filtersByDepartment.map((filter) => (
                 <span key={filter.id} className="filter-item">
-                  <label htmlFor={filter.id}>{filter.name}</label>
                   <input
                     className="filter-checkbox"
                     id={filter.id}
@@ -139,6 +138,7 @@ const ProductList = ({ updateCheckoutCount }) => {
                     checked={activeFilter.includes(filter.id)}
                     onChange={() => onFilterChange(filter.id)}
                   />
+                  <label htmlFor={filter.id}>{filter.name}</label>
                 </span>
               ))
             : null}
@@ -149,7 +149,6 @@ const ProductList = ({ updateCheckoutCount }) => {
           {!error && filtersByBrand.length
             ? filtersByBrand.map((filter, index) => (
                 <span key={index} className="filter-item">
-                  <label htmlFor={index}>{filter.name}</label>
                   <input
                     className="filter-checkbox"
                     id={index}
@@ -157,6 +156,7 @@ const ProductList = ({ updateCheckoutCount }) => {
                     checked={activeFilter.includes(filter.value)}
                     onChange={() => onFilterChange(filter.value)}
                   />
+                  <label htmlFor={index}>{filter.name}</label>
                 </span>
               ))
             : null}

@@ -8,7 +8,8 @@
 }
 
 .filter-title {
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .filter-data {
@@ -19,7 +20,15 @@
 }
 
 .filter-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
   margin: 8px 16px;
+}
+
+.filter-item label {
+  color: var(--light-gray-foreground);
 }
 
 .filter-checkbox {
