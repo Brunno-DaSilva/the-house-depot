@@ -67,91 +67,88 @@ const ProductForm = () => {
 
   return (
     <div className="productForm">
-      <h1 className="productForm__title">Add A New Product</h1>
+      <h1 className="productForm__title">Add Product</h1>
       {loading ? <Loader message="Loading new product form data..." /> : null}
       {!loading ? (
-        <form className="product-form">
-          <ul className="product-form-list">
-            <li className="product-form-list-item">
-              <label htmlFor="department">Department</label>
-              <select
-                className="product-form-dropdown"
-                id="department"
-                value={newProduct.departmentId || ""}
-                onChange={(e) =>
-                  onChange("departmentId", Number(e.target.value) || null)
-                }
-              >
-                <option key={-1} value="">
-                  Please select a department...
-                </option>
-                {departments.length > 0
-                  ? departments.map((dept) => (
-                      <option key={dept.id} value={dept.id}>
-                        {dept.name}
-                      </option>
-                    ))
-                  : null}
-              </select>
-            </li>
-            <li className="product-form-list-item">
-              <label htmlFor="name">Product Name</label>
-              <input
-                className="product-form-input"
-                id="name"
-                type="text"
-                placeholder="Name"
-                value={newProduct.name}
-                onChange={(e) => onChange("name", e.target.value)}
-              />
-            </li>
-            <li className="product-form-list-item">
-              <label htmlFor="brand">Brand</label>
-              <input
-                className="product-form-input"
-                id="brand"
-                type="text"
-                placeholder="Brand"
-                value={newProduct.brand}
-                onChange={(e) => onChange("brand", e.target.value)}
-              />
-            </li>
-            <li className="product-form-list-item">
-              <label htmlFor="description">Description</label>
-              <textarea
-                className="product-form-input"
-                id="description"
-                type="text"
-                placeholder="Description"
-                value={newProduct.description}
-                onChange={(e) => onChange("description", e.target.value)}
-              />
-            </li>
-            <li className="product-form-list-item">
-              <label htmlFor="price">Retail Price</label>
-              <input
-                className="product-form-input"
-                id="price"
-                type="text"
-                placeholder="Retail Price"
-                value={newProduct.retailPrice}
-                onChange={(e) =>
-                  onChange("retailPrice", Number(e.target.value))
-                }
-              />
-            </li>
-            <li className="product-form-list-item">
-              <button
-                data-testid="submit"
-                type="button"
-                className="primary"
-                onClick={onSubmit}
-                disabled={!isValid()}
-              >
-                Submit
-              </button>
-            </li>
-          </ul>
+        <form>
+          <div className="productForm__container">
+            <label htmlFor="department">Department</label>
+            <select
+              className="productForm__dropdown"
+              id="department"
+              value={newProduct.departmentId || ""}
+              onChange={(e) =>
+                onChange("departmentId", Number(e.target.value) || null)
+              }
+            >
+              <option key={-1} value="">
+                Please select a department...
+              </option>
+              {departments.length > 0
+                ? departments.map((dept) => (
+                    <option key={dept.id} value={dept.id}>
+                      {dept.name}
+                    </option>
+                  ))
+                : null}
+            </select>
+          </div>
+
+          <div className="productForm__container">
+            <label htmlFor="name">Product Name</label>
+            <input
+              className="product-form-input"
+              id="name"
+              type="text"
+              placeholder="Name"
+              value={newProduct.name}
+              onChange={(e) => onChange("name", e.target.value)}
+            />
+          </div>
+          <div className="productForm__container">
+            <label htmlFor="brand">Brand</label>
+            <input
+              className="product-form-input"
+              id="brand"
+              type="text"
+              placeholder="Brand"
+              value={newProduct.brand}
+              onChange={(e) => onChange("brand", e.target.value)}
+            />
+          </div>
+          <div className="productForm__container">
+            <label htmlFor="description">Description</label>
+            <textarea
+              className="product-form-input"
+              id="description"
+              type="text"
+              placeholder="Description"
+              value={newProduct.description}
+              onChange={(e) => onChange("description", e.target.value)}
+            />
+          </div>
+          <div className="productForm__container">
+            <label htmlFor="price">Retail Price</label>
+            <input
+              className="product-form-input"
+              id="price"
+              type="text"
+              placeholder="Retail Price"
+              value={newProduct.retailPrice}
+              onChange={(e) => onChange("retailPrice", Number(e.target.value))}
+            />
+          </div>
+          <div className="productForm__container">
+            <button
+              data-testid="submit"
+              type="button"
+              className="productForm__button"
+              onClick={onSubmit}
+              disabled={!isValid()}
+            >
+              Create Product
+            </button>
+          </div>
         </form>
       ) : null}
     </div>

@@ -1,5 +1,64 @@
 .productForm {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .productForm__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  margin: 2rem 0rem;
+}
+form {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--bg-white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.productForm__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.productForm__container label {
+  font-size: 0.7rem;
+  color: var(--dark-gray-foreground);
+  letter-spacing: 0.042rem;
+}
+
+.productForm__container select,
+.productForm__container input,
+.productForm__container textarea {
+  font-size: 0.8rem;
+  color: var(--light-gray-foreground);
+  padding: 1rem 0.5rem;
+  border: 1px solid #dadfe1;
+  border-radius: 0.5rem;
+}
+
+.productForm__container select::placeholder,
+.productForm__container input::placeholder,
+.productForm__container textarea::placeholder {
+  color: #b7babb;
+}
+
+.productForm__button {
+  background-color: var(--yellow-ascent);
+  color: var(--dark-gray-foreground);
+  font-weight: bold;
+  border: none;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  transition: ease-in-out;
+  border-radius: 0.5rem;
+}
+
+.productForm__button:hover {
+  cursor: pointer;
+  opacity: 0.9;
 }
