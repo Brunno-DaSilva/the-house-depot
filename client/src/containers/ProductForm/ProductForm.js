@@ -82,7 +82,7 @@ const ProductForm = () => {
               }
             >
               <option key={-1} value="">
-                Please select a department...
+                Select a department
               </option>
               {departments.length > 0
                 ? departments.map((dept) => (

@@ -47,6 +47,12 @@ form {
   color: #b7babb;
 }
 
+select:invalid,
+select option[value=""],
+select option[key="{-1}"] {
+  color: #b7babb;
+}
+
 .productForm__button {
   background-color: var(--yellow-ascent);
   color: var(--dark-gray-foreground);
