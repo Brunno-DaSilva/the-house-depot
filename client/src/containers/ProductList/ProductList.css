@@ -37,19 +37,27 @@
 
 .product-list-container {
   display: grid;
-  grid-template-rows: 55px calc(100vh - 55px);
+  grid-template-rows: 80px calc(100vh - 80px);
   grid-template-columns: 220px auto;
   grid-template-areas:
     "filter header"
     "filter products";
 }
 
+.product-list-container .underscore {
+  width: 10rem;
+  height: 1px;
+  background-color: var(--yellow-ascent);
+}
 .products-container {
   grid-area: products;
   overflow: auto;
 }
 
-.product-list-header {
+.productList__title {
+  margin-top: 0;
+  font-size: 2.5rem;
+  margin: 2rem 0rem;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -162,7 +162,7 @@ const ProductList = ({ updateCheckoutCount }) => {
             : null}
         </div>
       </section>
-      <h1 className="product-list-header">Products</h1>
+      <h1 className="productList__title">Products</h1>
       <section className="products-container">
         {error ? (
           <p className="product-list-message">
