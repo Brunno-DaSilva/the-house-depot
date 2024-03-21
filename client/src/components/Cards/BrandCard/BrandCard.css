@@ -1,7 +1,14 @@
 .brand {
-  width: 50%;
+  width: 100%;
 }
 
+.brand__title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0.5rem;
+}
 .brand__title h3 {
   font-size: 28px;
   color: var(--dark-gray-foreground);

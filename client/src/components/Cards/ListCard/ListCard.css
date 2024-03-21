@@ -1,5 +1,13 @@
 .list {
-  width: 50%;
+  width: 100%;
+}
+
+.list__title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0.5rem;
 }
 
 .list__title h3 {

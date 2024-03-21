@@ -60,3 +60,18 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.home__bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home__bottom-departments,
+.home__bottom-brands {
+  width: 35%;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+}

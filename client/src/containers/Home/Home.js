@@ -147,10 +147,9 @@ const Home = () => {
         <div className="home__bottom-departments">
           <ListCard title="Departments" items={departments} />
         </div>
-        <div className="home__bottom-departments">
+        <div className="home__bottom-brands">
           <BrandCard title="Brands" items={brands} />
         </div>
-        <div className="home__bottom-highlights"></div>
       </div>
     </div>
   );
