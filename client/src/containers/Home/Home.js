@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import * as departmentApi from "../../services/departmentApi";
-import { FETCH_DEPARTMENT_DATA_ERROR } from "../../constants/constants";
+import * as productApi from "../../services/productApi";
+import {
+  FETCH_DEPARTMENT_DATA_ERROR,
+  FETCH_CHECKOUT_PRODUCTS_ERROR,
+} from "../../constants/constants";
 import Loader from "../../components/Loader/Loader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import StatusCard from "../../components/Cards/StatusCard/StatusCard";
 import ListCard from "../../components/Cards/ListCard/ListCard";
+import BrandCard from "../../components/Cards/BrandCard/BrandCard";
 import "./Home.css";
 
 const Home = () => {
@@ -14,6 +19,7 @@ const Home = () => {
   const [departments, setDepartment] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [brands, setBrands] = useState([]);
 
   useEffect(() => {
     const getDateAndTime = async () => {
@@ -75,6 +81,31 @@ const Home = () => {
     fetchDepartments();
   }, []);
 
+  useEffect(() => {
+    const fetchBrands = async () => {
+      const allProducts = await productApi.getAllProducts();
+
+      if (allProducts !== FETCH_CHECKOUT_PRODUCTS_ERROR) {
+        const getBrands = [
+          ...new Set(
+            allProducts.map(({ brand }) => {
+              return brand;
+            })
+          ),
+        ];
+
+        const newObj = getBrands.map((brand) => ({ brand }));
+
+        setBrands(newObj);
+      } else {
+        setError(true);
+      }
+      setLoading(false);
+    };
+
+    fetchBrands();
+  }, []);
+
   console.log("Something Went Wrong => ", error);
 
   return (
@@ -96,17 +127,17 @@ const Home = () => {
       <div className="home__cards">
         <StatusCard
           title="Weekly Product Count"
-          productCount={99}
+          productCount={100}
           interval="weekly"
         />
         <StatusCard
           title="Monthly Product Count"
-          productCount={55}
+          productCount={50}
           interval="monthly"
         />
         <StatusCard
           title="Yearly Product Count"
-          productCount={35}
+          productCount={60}
           interval="yearly"
         />
       </div>
@@ -115,6 +146,9 @@ const Home = () => {
         {loading ? <Loader message="Loading new product form data..." /> : null}
         <div className="home__bottom-departments">
           <ListCard title="Departments" items={departments} />
+        </div>
+        <div className="home__bottom-departments">
+          <BrandCard title="Brands" items={brands} />
         </div>
         <div className="home__bottom-highlights"></div>
       </div>

@@ -1,0 +1,42 @@
+.brand {
+  width: 50%;
+}
+
+.brand__title h3 {
+  font-size: 28px;
+  color: var(--dark-gray-foreground);
+  letter-spacing: -2px;
+  font-weight: 500;
+}
+
+.brand__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.brand__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.5rem;
+  padding: 0.3rem;
+  padding-left: 2.5rem;
+  border: 1px solid #f1f1f1;
+  border-radius: 0.8rem;
+}
+
+.brand__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(43, 96%, 54%, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.brand__item-icon .icon {
+  color: var(--yellow-ascent);
+}
