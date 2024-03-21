@@ -1,5 +1,8 @@
 .navbar {
+  position: fixed;
+  top: 0%;
   background-color: var(--bg-white);
+  width: 99vw;
   height: 70px;
   display: flex;
   justify-content: space-between;
