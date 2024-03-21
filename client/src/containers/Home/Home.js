@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import * as departmentApi from "../../services/departmentApi";
-import * as productApi from "../../services/productApi";
+import * as vendorApi from "../../services/vendorApi";
 import {
   FETCH_DEPARTMENT_DATA_ERROR,
-  FETCH_CHECKOUT_PRODUCTS_ERROR,
+  FETCH_VENDOR_DATA_ERROR,
 } from "../../constants/constants";
 import Loader from "../../components/Loader/Loader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,7 +19,7 @@ const Home = () => {
   const [departments, setDepartment] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [brands, setBrands] = useState([]);
+  const [vendors, setVendors] = useState([]);
 
   useEffect(() => {
     const getDateAndTime = async () => {
@@ -71,7 +71,9 @@ const Home = () => {
       const allDepartments = await departmentApi.getAllDepartments();
 
       if (allDepartments !== FETCH_DEPARTMENT_DATA_ERROR) {
-        setDepartment(allDepartments);
+        const sliceFirstFiveDeps = allDepartments.slice(0, 5);
+
+        setDepartment(sliceFirstFiveDeps);
       } else {
         setError(true);
       }
@@ -82,28 +84,20 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const fetchBrands = async () => {
-      const allProducts = await productApi.getAllProducts();
+    const fetchVendors = async () => {
+      const allVendors = await vendorApi.getAllVendors();
 
-      if (allProducts !== FETCH_CHECKOUT_PRODUCTS_ERROR) {
-        const getBrands = [
-          ...new Set(
-            allProducts.map(({ brand }) => {
-              return brand;
-            })
-          ),
-        ];
+      if (allVendors !== FETCH_VENDOR_DATA_ERROR) {
+        const sliceFirstFiveVendors = allVendors.slice(0, 5);
 
-        const newObj = getBrands.map((brand) => ({ brand }));
-
-        setBrands(newObj);
+        setVendors(sliceFirstFiveVendors);
       } else {
         setError(true);
       }
       setLoading(false);
     };
 
-    fetchBrands();
+    fetchVendors();
   }, []);
 
   console.log("Something Went Wrong => ", error);
@@ -148,7 +142,7 @@ const Home = () => {
           <ListCard title="Departments" items={departments} />
         </div>
         <div className="home__bottom-brands">
-          <BrandCard title="Brands" items={brands} />
+          <BrandCard title="Brands" items={vendors} />
         </div>
       </div>
     </div>

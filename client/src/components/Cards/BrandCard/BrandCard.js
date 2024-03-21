@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,16 +11,18 @@ const BrandCard = ({ title, items }) => {
     <div className="brand">
       <div className="brand__title">
         <h3>{title}</h3>
-        <FontAwesomeIcon className="icon" icon={faEllipsisV} />
+        <NavLink exact to="/vendors">
+          <FontAwesomeIcon className="icon" icon={faEllipsisV} />
+        </NavLink>
       </div>
       <div className="brand__items">
         {items.map((item) => {
           return (
-            <div className="brand__item" key={item.brand}>
+            <div className="brand__item" key={item.id}>
               <div className="brand__item-icon">
                 <FontAwesomeIcon className="icon" icon={faFolder} />
               </div>
-              <div>{item.brand}</div>
+              <div>{item.vendorName}</div>
             </div>
           );
         })}

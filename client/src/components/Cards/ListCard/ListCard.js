@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTools, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,7 +11,9 @@ const ListCard = ({ title, items }) => {
     <div className="list">
       <div className="list__title">
         <h3>{title}</h3>
-        <FontAwesomeIcon className="icon" icon={faEllipsisV} />
+        <NavLink exact to="/my-products">
+          <FontAwesomeIcon className="icon" icon={faEllipsisV} />
+        </NavLink>
       </div>
       <div className="list__items">
         {items.map((item) => {

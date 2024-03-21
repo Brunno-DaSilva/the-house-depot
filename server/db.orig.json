@@ -291,5 +291,43 @@
       "imageURL": "https://images.thdstatic.com/productImages/105899f6-9c89-4f07-a6fa-c1b975613cf5/svn/polished-chrome-pfister-widespread-bathroom-faucets-lf-049-lrcc-64_600.jpg"
     }
   ],
+  "vendors": [
+    {
+      "id": 1,
+      "vendorName": "YouOBi"
+    },
+    {
+      "id": 2,
+      "vendorName": "DeMalt"
+    },
+    {
+      "id": 3,
+      "vendorName": "Bubble Scrubbers"
+    },
+    {
+      "id": 4,
+      "vendorName": "Don Leere"
+    },
+    {
+      "id": 5,
+      "vendorName": "MetallicGleam"
+    },
+    {
+      "id": 6,
+      "vendorName": "GreenWorks"
+    },
+    {
+      "id": 7,
+      "vendorName": "AquaGarden"
+    },
+    {
+      "id": 8,
+      "vendorName": "EcoHeat"
+    },
+    {
+      "id": 9,
+      "vendorName": "CleanBot"
+    }
+  ],
   "checkout": []
 }
