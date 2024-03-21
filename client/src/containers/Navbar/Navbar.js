@@ -29,12 +29,22 @@ const Navbar = ({ checkoutCount }) => {
         </div>
       </div>
       <div className="navbar-links-wrapper">
-        <NavLink exact to="/my-products">
-          My Products
+        <NavLink exact to="/products">
+          Products
         </NavLink>
+
         <NavLink exact to="/new-product-form">
           Add New Products
         </NavLink>
+
+        <NavLink exact to="/departments">
+          Departments
+        </NavLink>
+
+        <NavLink exact to="/vendors">
+          Brands
+        </NavLink>
+
         <NavLink className="navbar-link" exact to="/checkout">
           <FontAwesomeIcon className="navbar-icon" icon={faShoppingCart} />
           {checkoutCount !== FETCH_CHECKOUT_COUNT_ERROR && checkoutCount > 0 ? (

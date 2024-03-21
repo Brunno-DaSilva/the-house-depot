@@ -49,7 +49,7 @@ const App = () => {
         </div>
         <article className="app-container">
           <Route exact path="/" component={Home} />
-          <Route path="/my-products">
+          <Route path="/products">
             <ProductList updateCheckoutCount={updateCheckoutCount} />
           </Route>
           <Route exact path="/new-product-form" component={ProductForm} />

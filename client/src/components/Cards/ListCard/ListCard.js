@@ -11,7 +11,7 @@ const ListCard = ({ title, items }) => {
     <div className="list">
       <div className="list__title">
         <h3>{title}</h3>
-        <NavLink exact to="/my-products">
+        <NavLink exact to="/products">
           <FontAwesomeIcon className="icon" icon={faEllipsisV} />
         </NavLink>
       </div>

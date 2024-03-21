@@ -76,7 +76,7 @@ const Checkout = ({ updateCheckoutCount }) => {
         {!loading && !error && !checkoutItems.length ? (
           <p className="checkout-message">
             The checkout is currently empty. Add some items from the&nbsp;
-            <NavLink className="page-link" to="/my-products">
+            <NavLink className="page-link" to="/products">
               My Products
             </NavLink>
             &nbsp;page.
