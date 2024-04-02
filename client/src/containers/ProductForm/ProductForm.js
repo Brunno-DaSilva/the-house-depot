@@ -7,6 +7,7 @@ import {
 } from "../../constants/constants";
 import * as productApi from "../../services/productApi";
 import { useDepartments } from "../../Hooks/useDepartments";
+import Button from "../../components/Button/Button";
 
 import "./ProductForm.css";
 
@@ -139,15 +140,11 @@ const ProductForm = () => {
             />
           </div>
           <div className="productForm__container">
-            <button
-              data-testid="submit"
-              type="button"
-              className="productForm__button"
+            <Button
+              title="Create Product"
               onClick={onSubmit}
               disabled={!isValid()}
-            >
-              Create Product
-            </button>
+            />
           </div>
         </form>
       ) : null}
