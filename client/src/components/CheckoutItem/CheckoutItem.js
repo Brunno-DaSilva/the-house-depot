@@ -1,9 +1,10 @@
-import React from 'react';
-import { formatPrice } from '../../helpers/formatPrice';
-import './CheckoutItem.css';
+import React from "react";
+import PropTypes from "prop-types";
+import { formatPrice } from "../../helpers/formatPrice";
+import "./CheckoutItem.css";
 
 const CheckoutItem = ({ item, removeItemFromCheckout }) => {
-  const { name, brand, description, retailPrice } = item;
+  const { id, name, brand, description, retailPrice } = item;
 
   return (
     <li className="checkout-item">
@@ -21,15 +22,17 @@ const CheckoutItem = ({ item, removeItemFromCheckout }) => {
         {formatPrice(retailPrice)}
       </div>
       <div>
-        <button
-          className="primary"
-          onClick={() => removeItemFromCheckout(item.id)}
-        >
+        <button className="primary" onClick={() => removeItemFromCheckout(id)}>
           Remove Product from Checkout
         </button>
       </div>
     </li>
   );
+};
+
+CheckoutItem.propTypes = {
+  item: PropTypes.object.isRequired,
+  removeItemFromCheckout: PropTypes.func.isRequired,
 };
 
 export default CheckoutItem;

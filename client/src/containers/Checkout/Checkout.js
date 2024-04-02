@@ -15,11 +15,12 @@ import "./Checkout.css";
 const Checkout = ({ updateCheckoutCount }) => {
   const [checkoutItems, setCheckoutItems] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    const fetchCheckoutItemns = async () => {
+    const fetchCheckoutItems = async () => {
       const allCheckoutItems = await checkoutApi.getAllCheckoutItems();
+
       if (allCheckoutItems !== FETCH_CHECKOUT_PRODUCTS_ERROR) {
         setCheckoutItems(allCheckoutItems);
       } else {
@@ -27,7 +28,7 @@ const Checkout = ({ updateCheckoutCount }) => {
       }
       setLoading(false);
     };
-    fetchCheckoutItemns();
+    fetchCheckoutItems();
   }, []);
 
   const removeItemFromCheckout = async (id) => {
@@ -49,6 +50,7 @@ const Checkout = ({ updateCheckoutCount }) => {
       <h1 className="checkout-title">Checkout Page</h1>
       <div>
         {loading ? <Loader message="Fetching items to checkout..." /> : null}
+
         {error ? (
           <p className="checkout-message">
             {FETCH_CHECKOUT_PRODUCTS_ERROR} Please refresh the page or try again
