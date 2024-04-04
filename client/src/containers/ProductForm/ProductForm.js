@@ -16,6 +16,7 @@ const defaultsForNewProduct = {
   name: "",
   brand: "",
   description: "",
+  imageURL: "",
   retailPrice: 0,
 };
 const ProductForm = () => {
@@ -57,13 +58,26 @@ const ProductForm = () => {
     if (addProduct !== ADD_NEW_PRODUCT_ERROR) {
       setNewProduct(defaultsForNewProduct);
       setSaved(true);
-      toast.success(ADD_NEW_PRODUCT_SUCCESS);
+      toast(`${ADD_NEW_PRODUCT_SUCCESS}`, {
+        position: "top-right",
+        autoClose: 2000,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        className: "toast__Success",
+      });
     } else {
-      toast.error(`${addProduct} Please refresh the page and try again.`);
+      toast(`${addProduct} Please refresh the page and try again.`, {
+        position: "top-right",
+        autoClose: 2000,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        className: "toast__Error",
+      });
     }
     setLoading(false);
   };
-
   console.log(saved);
 
   return (
@@ -128,6 +142,19 @@ const ProductForm = () => {
               onChange={(e) => onChange("description", e.target.value)}
             />
           </div>
+
+          <div className="productForm__container">
+            <label htmlFor="imageURL">Image URL</label>
+            <input
+              className="product-form-input"
+              id="imageURL"
+              type="text"
+              placeholder="Add your image URL"
+              value={newProduct.imageURL}
+              onChange={(e) => onChange("imageURL", e.target.value)}
+            />
+          </div>
+
           <div className="productForm__container">
             <label htmlFor="price">Retail Price</label>
             <input
@@ -139,6 +166,7 @@ const ProductForm = () => {
               onChange={(e) => onChange("retailPrice", Number(e.target.value))}
             />
           </div>
+
           <div className="productForm__container">
             <Button
               title="Create Product"

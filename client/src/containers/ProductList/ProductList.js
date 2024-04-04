@@ -87,9 +87,23 @@ const ProductList = ({ updateCheckoutCount }) => {
     const productAdded = await checkoutApi.addItemToCheckout(product);
     if (productAdded === PRODUCT_ADDED_TO_CHECKOUT_SUCCESS) {
       updateCheckoutCount();
-      toast.success(PRODUCT_ADDED_TO_CHECKOUT_SUCCESS);
+      toast(`${PRODUCT_ADDED_TO_CHECKOUT_SUCCESS}`, {
+        position: "top-right",
+        autoClose: 2000,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        className: "toast__Success",
+      });
     } else {
-      toast.error(productAdded);
+      toast(`${productAdded}`, {
+        position: "top-right",
+        autoClose: 2000,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        className: "toast__Error",
+      });
     }
     setLoading(false);
     setError(false);

@@ -38,9 +38,23 @@ const Checkout = ({ updateCheckoutCount }) => {
     if (remainingCheckoutItems !== REMOVE_PRODUCT_FROM_CHECKOUT_ERROR) {
       setCheckoutItems(remainingCheckoutItems);
       await updateCheckoutCount();
-      toast.success(PRODUCT_REMOVED_FROM_CHECKOUT_SUCCESS);
+      toast(`${PRODUCT_REMOVED_FROM_CHECKOUT_SUCCESS}`, {
+        position: "top-right",
+        autoClose: 2000,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        className: "toast__Success",
+      });
     } else {
-      toast.error(remainingCheckoutItems);
+      toast(`${remainingCheckoutItems}`, {
+        position: "top-right",
+        autoClose: 2000,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        className: "toast__Error",
+      });
     }
     setLoading(false);
   };

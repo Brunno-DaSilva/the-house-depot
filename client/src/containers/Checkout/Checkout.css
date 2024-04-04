@@ -35,3 +35,17 @@
   background-color: unset !important;
   text-decoration: underline;
 }
+
+.toast__Success {
+  background-color: #ecfbee !important;
+  font-size: 0.9rem;
+  color: #216726 !important;
+  border-radius: 0.5rem !important;
+}
+
+.toast__Error {
+  background-color: #fef5f5 !important;
+  font-size: 0.9rem;
+  color: #c43e3b !important;
+  border-radius: 0.5rem !important;
+}
