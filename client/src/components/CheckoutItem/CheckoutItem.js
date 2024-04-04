@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { formatPrice } from "../../helpers/formatPrice";
+import Button from "../Button/Button";
 import "./CheckoutItem.css";
 
 const CheckoutItem = ({ item, removeItemFromCheckout }) => {
@@ -22,9 +23,7 @@ const CheckoutItem = ({ item, removeItemFromCheckout }) => {
         {formatPrice(retailPrice)}
       </div>
       <div>
-        <button className="primary" onClick={() => removeItemFromCheckout(id)}>
-          Remove Product from Checkout
-        </button>
+        <Button title="Remove" onClick={() => removeItemFromCheckout(id)} />
       </div>
     </li>
   );
