@@ -78,13 +78,13 @@ const Checkout = ({ updateCheckoutCount }) => {
           </p>
         ) : null}
         {!loading && !error && checkoutItems.length ? (
-          <div>
-            <div className="checkout-header">
+          <div className="checkout__table">
+            <div className="checkout__header">
               <div>Product Information</div>
               <div>Suggested Retail Price</div>
               <div>Update Checkout</div>
             </div>
-            <ul className="checkout-list-wrapper">
+            <ul className="checkout__list-wrapper">
               {checkoutItems.map((item) => (
                 <CheckoutItem
                   key={item.id}
