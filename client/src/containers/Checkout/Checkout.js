@@ -4,12 +4,18 @@ import { NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import CheckoutItem from "../../components/CheckoutItem/CheckoutItem";
 import Loader from "../../components/Loader/Loader";
+import Button from "../../components/Button/Button";
 import {
   FETCH_CHECKOUT_PRODUCTS_ERROR,
   REMOVE_PRODUCT_FROM_CHECKOUT_ERROR,
   PRODUCT_REMOVED_FROM_CHECKOUT_SUCCESS,
 } from "../../constants/constants";
 import * as checkoutApi from "../../services/checkoutApi";
+// eslint-disable-next-line no-unused-vars
+// import emptyCartSvg from "../../helpers/emptyCartSvg";
+
+import emptyCartSvg from "./emptyCart.svg";
+
 import "./Checkout.css";
 
 const Checkout = ({ updateCheckoutCount }) => {
@@ -60,9 +66,9 @@ const Checkout = ({ updateCheckoutCount }) => {
   };
 
   return (
-    <div>
-      <h1 className="checkout-title">Checkout Page</h1>
-      <div>
+    <div className="checkout">
+      <h1 className="checkout__title">Checkout Page</h1>
+      <div className="checkout__content">
         {loading ? <Loader message="Fetching items to checkout..." /> : null}
 
         {error ? (
@@ -90,13 +96,17 @@ const Checkout = ({ updateCheckoutCount }) => {
           </div>
         ) : null}
         {!loading && !error && !checkoutItems.length ? (
-          <p className="checkout-message">
-            The checkout is currently empty. Add some items from the&nbsp;
-            <NavLink className="page-link" to="/products">
-              My Products
-            </NavLink>
-            &nbsp;page.
-          </p>
+          <div className="checkout__empty">
+            <div className="checkout__empty--img">
+              <img src={emptyCartSvg} alt="Empty Cart Image" />
+            </div>
+            <div className="checkout__empty--msg">
+              <p>The checkout is currently empty.</p>
+              <NavLink className="page-link" to="/products">
+                <Button title="Go to Products" />
+              </NavLink>
+            </div>
+          </div>
         ) : null}
       </div>
     </div>
