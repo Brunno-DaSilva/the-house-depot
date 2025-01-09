@@ -8,6 +8,14 @@
   border-bottom: 1px solid #e8e9ec;
 }
 
+.checkout__item-img {
+  width: 200px;
+}
+
+.checkout__item-img img {
+  width: 100%;
+}
+
 .checkout-item:first-child {
   border-top: 0;
 }

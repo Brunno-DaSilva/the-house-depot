@@ -35,7 +35,7 @@ export const addItemToCheckout = async (item) => {
   try {
     // fetch existing items in cart
     const existingCheckoutItems = await getAllCheckoutItems();
-    // check if item to add to cart already exists in cart
+    // check if item added to cart already exists in cart
     const found = existingCheckoutItems.find((it) => it.productId === item.id);
     // if it does, tell the user it's already in checkout
     if (found) {

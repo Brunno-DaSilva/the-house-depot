@@ -5,12 +5,15 @@ import Button from "../Button/Button";
 import "./CheckoutItem.css";
 
 const CheckoutItem = ({ item, removeItemFromCheckout }) => {
-  const { id, name, brand, description, retailPrice } = item;
+  const { id, name, brand, description, retailPrice, imageURL } = item;
 
   return (
     <li className="checkout__item">
       <div>
         <div className="checkout-item-wrapper">
+          <div className="checkout__item-img">
+            <img src={imageURL} alt={name} />
+          </div>
           <div className="checkout-item-data strong">{name}</div>
           <div className="checkout-item-data brand">
             <span>{brand}</span>

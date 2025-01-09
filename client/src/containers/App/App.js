@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { CartProvider } from "../../Context/CartContext/CartContext";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Navbar from "../Navbar/Navbar";
@@ -38,27 +39,29 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <ToastContainer />
-      <section className="app-wrapper">
-        <header className="header">
-          <Navbar checkoutCount={checkoutCount} />
-        </header>
-        <div className="sidebar">
-          <Sidebar />
-        </div>
-        <article className="app-container">
-          <Route exact path="/" component={Home} />
-          <Route path="/products">
-            <ProductList updateCheckoutCount={updateCheckoutCount} />
-          </Route>
-          <Route exact path="/new-product-form" component={ProductForm} />
-          <Route exact path="/checkout">
-            <Checkout updateCheckoutCount={updateCheckoutCount} />
-          </Route>
-        </article>
-      </section>
-    </Router>
+    <CartProvider>
+      <Router>
+        <ToastContainer />
+        <section className="app-wrapper">
+          <header className="header">
+            <Navbar checkoutCount={checkoutCount} />
+          </header>
+          <div className="sidebar">
+            <Sidebar />
+          </div>
+          <article className="app-container">
+            <Route exact path="/" component={Home} />
+            <Route path="/products">
+              <ProductList updateCheckoutCount={updateCheckoutCount} />
+            </Route>
+            <Route exact path="/new-product-form" component={ProductForm} />
+            <Route exact path="/checkout">
+              <Checkout updateCheckoutCount={updateCheckoutCount} />
+            </Route>
+          </article>
+        </section>
+      </Router>
+    </CartProvider>
   );
 };
 

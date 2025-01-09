@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../../Context/CartContext/CartContext";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -7,7 +8,10 @@ import PropTypes from "prop-types";
 
 import "./Navbar.css";
 
-const Navbar = ({ checkoutCount }) => {
+const Navbar = () => {
+  const { checkoutCount } = useContext(CartContext);
+
+  console.log(checkoutCount);
   return (
     <nav className="navbar">
       <div className="navbar__home-link">
@@ -48,7 +52,7 @@ const Navbar = ({ checkoutCount }) => {
         <NavLink className="navbar-link" exact to="/checkout">
           <FontAwesomeIcon className="navbar-icon" icon={faShoppingCart} />
           {checkoutCount !== FETCH_CHECKOUT_COUNT_ERROR && checkoutCount > 0 ? (
-            <p className="navbar-checkout-count">: {checkoutCount}</p>
+            <p className="navbar-checkout-count"> {checkoutCount}</p>
           ) : null}
         </NavLink>
       </div>
